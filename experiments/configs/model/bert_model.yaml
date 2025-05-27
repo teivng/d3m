@@ -1,0 +1,10 @@
+name: bert_model
+bert_type: distilbert
+freeze_features: False
+max_length: 512
+
+reg_weight_factor: 10
+param: diagonal
+prior_scale: 1.0
+wishart_scale: 1.0
+return_ood: False

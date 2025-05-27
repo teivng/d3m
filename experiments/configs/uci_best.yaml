@@ -1,0 +1,29 @@
+defaults:
+  - hydra: defaults
+  - train: defaults
+  - dataset: uci
+  - d3m: base
+  - model: mlp_model
+  - wandb_cfg: defaults
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  - _self_
+
+model:
+  mid_features: 16
+  mid_layers: 4
+  reg_weight_factor: 100
+
+d3m:
+  temp: 1
+  data_sample_size: 200
+  Phi_size: 1000
+
+train:
+  num_epochs: 50
+
+monitor_type: bayesian
+from_pretrained: False
+seed: 57
+self_log: True
+wandb_enabled: True

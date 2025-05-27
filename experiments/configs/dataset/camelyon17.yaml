@@ -1,0 +1,5 @@
+name: camelyon17
+num_classes: 2
+data_dir: data/
+frac: 0.1
+download: True

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d3m"
+version = "1.0.6"
+authors = [
+    { name = "anonymous", email = "anonymous@provider.com" },
+]
+description = "Implements D3M for Post-Deployment Deterioration Monitoring of ML models."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy>=1.26.4', 
+    'torch>=2.5.1',
+    'torchvision>=0.20.1',
+    'vbll>=0.2.6',
+    'tqdm>=4.66.5',
+    'matplotlib>=3.10.0',
+    'pillow>=11.0.0',
+    'wandb>=0.19.6',
+    'hydra-core>=1.3.2',
+    'wilds>=2.0.0',
+    'twine',
+    'build',
+    'jupyter',
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+homepage = "github.com/anonymous_username/anonymous_repo"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["d3m*"]

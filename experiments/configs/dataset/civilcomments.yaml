@@ -1,0 +1,7 @@
+name: civilcomments
+num_classes: 2
+data_dir: data/
+frac: 0.1
+max_length: 512
+download: False
+featurized: False

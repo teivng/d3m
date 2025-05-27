@@ -1,0 +1,14 @@
+name: conv_model
+in_channels: 3
+mid_channels: 128
+kernel_size: 5
+mid_layers: 3
+pool_dims: 2
+hidden_dim: 128
+dropout: 0.0
+
+reg_weight_factor: 100
+param: diagonal
+prior_scale: 1.0
+wishart_scale: 1.0
+return_ood: False

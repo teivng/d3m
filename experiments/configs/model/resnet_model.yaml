@@ -1,0 +1,11 @@
+name: resnet_model
+resnet_type: resnet50
+hidden_dim: 1000
+resnet_pretrained: True
+freeze_features: False
+
+reg_weight_factor: 100
+param: diagonal
+prior_scale: 1.0
+wishart_scale: 1.0
+return_ood: False

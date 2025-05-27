@@ -1,0 +1,16 @@
+defaults:
+  - hydra: defaults
+  - train: defaults
+  - dataset: defaults
+  - d3m: base
+  - model: defaults
+  - wandb_cfg: defaults
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  - _self_
+
+monitor_type: bayesian
+from_pretrained: False
+seed: 57
+self_log: False
+wandb_enabled: True

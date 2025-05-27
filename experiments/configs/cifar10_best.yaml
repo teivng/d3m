@@ -1,0 +1,31 @@
+defaults:
+  - hydra: defaults
+  - train: defaults
+  - dataset: cifar10
+  - d3m: base
+  - model: conv_model
+  - wandb_cfg: defaults
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  - _self_
+
+model:
+  hidden_dim: 256
+  mid_layers: 3
+  kernel_size: 7
+  mid_channels: 128
+  reg_weight_factor: 10
+
+d3m:
+  data_sample_size: 200
+  temp: 1
+  Phi_size: 1000
+
+train:
+  num_epochs: 10
+  
+from_pretrained: False
+seed: 57
+monitor_type: bayesian
+self_log: True
+wandb_enabled: True

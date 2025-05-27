@@ -1,0 +1,4 @@
+name: uci
+num_classes: 2
+data_dir: data/uci_data/
+normalize: True

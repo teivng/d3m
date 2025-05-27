@@ -1,0 +1,5 @@
+__author__ = "Anonymous"
+__email__ = "anonymous@provider.com"
+__license__ = "MIT"
+__url__ = "https://github.com/anonymous_username/anonymous_repo"
+__description__ = "D3M for post-deployment deterioration monitoring of machine learning models."
