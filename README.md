@@ -7,7 +7,7 @@ Implementation of the D3M algorithm for post-deployment deterioration monitoring
 
 ## How does D3M work?
 
-[Overview of D3M](fig1.png)
+![Overview of D3M](fig1.png)
 
 1) **Train**: a feature extractor ($\operatorname{FE}_\theta$) and a Variational Bayesian Last Layer ($\operatorname{VBLL}_\theta$) are trained to model a posterior predictive distribution (PPD) over class logits. (2) **Calibrate**: disagreement statistics are computed by bootstrapping held-out ID datasets, sampling from the learned posteriors, and comparing sampled predictions to the base model’s outputs to collect a set of maximum disagreement rates $\Phi$. For illustrative purposes, agreements and disagreements between $y^{(3)}$ and $\Bar{y}$ are colored green and orange, respectively. (3) **Deploy**: at deployment, D3M monitors the model on incoming unlabeled data by computing the maximum disagreement rate $\Tilde{\phi}$ and flags deteriorating shift if $\Tilde{\phi} \geq \operatorname{Quantile}_{1-\alpha}(\Phi)$.
 
